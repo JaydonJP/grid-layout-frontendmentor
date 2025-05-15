@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("DMSans-VariableFont_opsz,wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyFontItalic";
+  src: url("DMSans-Italic-VariableFont_opsz,wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "MyFont",sans-serif ;
+    background: #f4f4f4;
+}
+.container{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 3fr 1fr 1fr 2fr;
+    grid-template-areas: 
+    "seven one one four"
+    "seven two three four"
+    "eight two three four"
+    "eight six five five";
+    width: 800px;
+    height: 90%;
+
+
+}
+
+
+.cards{
+    background-color: red;
+    border-radius: 0.5em;
+    padding: 1em;
+    text-align: center;
+
+}
+
+.one{
+    grid-area: one;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color: #6646bc;
+}
+.onetext{
+    font-size: 36px;
+    line-height: 1em;
+}
+.textyellow{
+    color: #fdcd76 ;
+}
+
+.italian{
+    font-family: 'MyFontItalic' ;
+}
+
+.oneimage{
+    width: 40%;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.onep{
+    color: lightgrey;
+    font-size: 10px;
+}
+
+.two{
+    grid-area: two;
+    display: flex;
+    flex-direction: column;
+    align-items: flexstart;
+    text-align: left;
+    background-color: white;
+    overflow: hidden;
+}
+
+.twoimage{
+    width: 150%;
+    
+}
+
+.twotext{
+    margin-top: 1em;
+    font-size:18px ;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.three{
+    grid-area: three;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #fecb6b;
+}
+
+.threetext{
+    font-size:18px ;
+    font-weight: 600;
+    line-height: 1em;
+}
+.threeimage{
+    width: 100%;
+    border-radius: 0.5em;
+    justify-self: center;
+    margin-top: 0.7em;
+}
+
+.four{
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #dcd0fb;
+    overflow: hidden;
+}
+
+.fourtext{
+    font-size:18px ;
+    font-weight: 600;
+    line-height: 1em;
+}
+.fourimage{
+    width: 150%;
+    margin: 1em;
+    margin-left: 0;
+}
+.fourp{
+    font-size: 12px;
+}
+
+.five{
+    grid-area: five;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    background-color: #6646bc;
+    padding: 0;
+    padding-left: 1em;
+    text-align: left;
+}
+.fiveimage{
+    width: 150px;
+}
+.fivetext{
+    font-size: 26px;
+    color: white;
+    line-height: 1em;
+}
+.six{
+    grid-area: six;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    background-color: white;
+}
+
+.sixtext{
+    font-size: 40px;
+    font-weight: bold;
+}
+.sixp{
+    font-size: 12px;
+}
+.siximage{
+    width: 90%;
+}
+
+.seven{
+    grid-area: seven;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #f9ede1;
+}
+
+.seventext{
+    font-size: 26px;
+    line-height: 1em;
+    font-weight: 600;
+}
+.sevenp{
+    font-family: "MyFontItalic",sans-serif;
+    color: #7857cb ;
+}
+.sevenimage{
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.eight{
+    grid-area: eight;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #fecb6b;
+}
+
+.eighttext{
+    font-size: 26px;
+    line-height: 1em;
+    font-weight: 600;
+}
+
+.eightimage{
+    width: 100%;
+    align-self: center;
+}
+
+@media (max-width:600px){
+   
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+    }
+    .cards{
+        width: 90%;
+        height: auto;
+        min-height: 200px;
+        justify-self: center;
+    }
+    .one{
+        justify-content: center;
+        align-items: center;
+    }
+    .twoimage{
+        width: 100%;
+    }
+    .three{
+        align-items: flex-start;
+    }
+    .threeimage{
+        width: 60%;
+    }
+    .threetext{
+        width: 70%;
+    }
+    .four{
+        align-items: center;
+        justify-content: space-evenly;
+        min-height:400px;
+        text-align: center;
+    }
+    .fourp{
+        width:70%;
+    }
+    .fourimage{
+        width: 90%;
+        margin: 0;
+    }
+    .five{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        min-height: 300px;
+    }
+    .fivetext{
+        width: 80%;
+    }
+    .fiveimage{
+        width: 60%;
+    }
+    .six{
+        justify-content: center;
+    }
+    .sixp{
+        padding: 0.5em;
+    }
+    .siximage{
+        width: 50%;
+    }
+    .sevenimage{
+        width: 50%;
+    }
+    .eight{
+        min-height: 300px;
+        flex-direction: column;
+        justify-content:space-evenly;
+    
+    }
+    .eightimage{
+        width: 70%
+        
+    }
+}
+@media (max-width:300px){
+    .onetext{
+        font-size: 30px !important;
+    }
+}
